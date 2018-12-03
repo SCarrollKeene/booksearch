@@ -1,9 +1,14 @@
-body {
+html, body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-size: 120%;
   font-family: 'Roboto', sans-serif;
   }
+.container {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -13,6 +18,10 @@ ul {
   }
 li {
   float: left;
+  border-right:1px solid black;
+  }
+  li:last-child {
+    border-right: none;
   }
 li a {
   display: block;
@@ -32,10 +41,14 @@ li a:hover {
 img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.push, .ftDesign {
+  height: 50px;
+}
 .ftDesign {
   background-color: rgb(255, 187, 0);
   text-align: center;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   }
 .ftDesign a:link {
   color: white;
@@ -44,16 +57,21 @@ img {
 .ftDesign a:hover {
   color: red;
   }
-.center {
-  text-align: center;
-  }
 .flRight {
   float: right;
+  }
+
+  /*Utility classes*/
+  .center {
+    text-align: center;
+    }
+  .warning {
+    color: red;
   }
   
   /*Media Screens*/
   @media only screen and (min-width: 900px) {
-    .container {
+    .container, .ftDesign {
       width: 950px;
       margin-left: auto;
       margin-right: auto;

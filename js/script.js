@@ -27,3 +27,56 @@ function bookSearch() {
 
 // Event listener to trigger click & bookSearch method upon button being clicked
 document.getElementById('button'),addEventListener('click', bookSearch, false);
+
+// Function used inside of contact.html
+function showInfo() {
+    let phnNum = document.getElementById("phnNum").value;
+    let eAddress = document.getElementById("eAddress").value;
+    let phnResult;
+    let emailResult;
+
+    // RegExp to validate phone number
+    let verifyPhnNum = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+
+    if (verifyPhnNum.test(phnNum)) {
+        phnResult = true;
+    } else {
+        alert("Phone Number invalid, please follow 10-digit format, \"(XXX)-XXX-XXXX\"");
+    }
+
+    // RegExp to validate email address
+    let verifyEmail = /^[_a-zA-Z0-9\\-]+(\.[_a-zA-Z0-9\\-]+)*@[A-Za-z0-9\\-]+(\.[A-Za-z0-9\\-]+)*(\.[a-z]{2,6})$/;
+
+    if (verifyEmail.test(eAddress)) {
+        emailResult = true;
+    } else {
+        alert("Email invalid, please use format, \"somename@somedomain.com/org/net/edu\"");
+    }
+
+    // Try-catch statement to verify information being entered into the fields is correct
+    var msg, x, x2, x3;
+    let fname = document.getElementById("fname");
+    let lname = document.getElementById("lname");
+    x = document.getElementById("fname").value;
+    x2 = document.getElementById("lname").value;
+    x3 = document.getElementById("feedback").value;
+    msg = document.getElementById("displayErr");
+    msg.innerHTML = "";
+    try {
+        if (x == "") throw "First Name is empty!";
+        if(!isNaN(x)) throw "First Name is not a number!";
+        if (x2 == "") throw "Last Name is empty!";
+        if(!isNaN(x2)) throw "Last Name is not a number!";
+        if (x3 == "") throw "Message box is empty!";
+        else {
+            alert(`Thank you, ${fname.value} ${lname.value}!`);
+        }
+    }
+    catch(err) {
+        msg.innerHTML = "Input for " + err;
+    }
+
+    //if (emailResult === true) {
+        //alert("Thank You!")
+    //}
+}

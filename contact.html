@@ -19,12 +19,39 @@
             </ul>            
         </nav>
         <header>
-            <h1>Contact</h1>
+            <h3 class="center">Contact</h3>
         </header>
+            <form>
+                <fieldset>
+                    <legend>User Info:</legend>
+                    <p><label for="title">Title: </label>
+                        <select name="title" id="title" required="required">
+                            <option value=""></option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Ms">Ms.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Prefer Not to say">Prefer not to say</option>
+                        </select>
+                    </p>
+                    <p><label for="fname">First Name: </label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" minlength="2" maxlength="50" required="required" /></p>
+                    <p><label for="lname">Last Name: </label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" minlength="2" maxlength="50" required="required" /></p>
+                    <p><label for="phnNum">Phone Number: </label>
+                        <input type="tel" id="phnNum" name="phnNum" placeholder="Valid Phone Number"></p>
+                        <p><label for="eAddress">Email Address: </label>
+                        <input type="email" id="eAddress" name="eAddress" placeholder="Valid Email Address" required="required" /></p>
+                    <p><textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Compose..." required="required"></textarea></p>
+                    <p class="warning" id="displayErr"></p>
+                    <p><input type="submit" value="Submit" onclick="showInfo()"></p>
+                </fieldset>
+            </form>
 
-        <footer class="ftDesign">
+        <div class="push"></div>
+    </div>
+    <footer class="ftDesign">
             <h4>Email: <a href="mailto:scarrollkeene@student.cccs.edu" target="_top">scarrollkeene@student.cccs.edu</a></h4>
         </footer>
-    </div>
 </body>
+<script src="js/script.js"></script>
 </html>
