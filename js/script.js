@@ -1,3 +1,8 @@
+// Display Current Date on Home Page
+let d = new Date().toLocaleDateString();
+document.getElementById("timeClock").innerHTML = d;
+
+
 function bookSearch() {
     let search = document.getElementById('search').value;
     document.getElementById('results').innerHTML = "";
