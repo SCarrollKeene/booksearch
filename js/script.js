@@ -75,8 +75,4 @@ function showInfo() {
     catch(err) {
         msg.innerHTML = "Input for " + err;
     }
-
-    //if (emailResult === true) {
-        //alert("Thank You!")
-    //}
 }
