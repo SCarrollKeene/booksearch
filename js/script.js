@@ -18,7 +18,7 @@ function bookSearch() {
                 results.innerHTML += "<img src=" + data.items[i].volumeInfo.imageLinks.smallThumbnail + ">";
                 results.innerHTML += "<h4> Title: " + data.items[i].volumeInfo.title + "</h4>";
                 results.innerHTML += "<h4> Author: " + data.items[i].volumeInfo.authors + "</h4>";
-                results.innerHTML += "<h4> Published: " + data.items[i].volumeInfo.publishedDate + "</h4>";
+                results.innerHTML += "<h4> Published: " + data.items[i].volumeInfo.publishedDate + "</h4>" + "<hr>";
             }
         },
         type: 'GET'
