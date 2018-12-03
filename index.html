@@ -11,23 +11,25 @@
 <body>
     <div class="container">
         <nav>
-            <a class="active" href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>            
         </nav>
         <header>
             
         </header>
-        <p>
+        <p class="center">
             <label for="search">Book Search</label>
             <input type="search" id="search" name="search" placeholder="Title or Author">
-            <input type="button" value="Search">
+            <input type="button" value="Search" onclick="bookSearch()">
         </p>
         
-        <div id="results"></div>
+        <div class="center" id="results"></div>
 
-        <footer>
-            
+        <footer class="ftDesign">
+            <h4>Email: <a href="mailto:scarrollkeene@student.cccs.edu" target="_top">scarrollkeene@student.cccs.edu</a></h4>
         </footer>
     </div>
 </body>
