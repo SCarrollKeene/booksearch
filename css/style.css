@@ -41,6 +41,19 @@ li a:hover {
 img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.polaroid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+.polInfo {
+  text-align: center;
+  padding: 15px;
+}
 .push, .ftDesign {
   height: 50px;
 }
@@ -49,31 +62,65 @@ img {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  }
+}
 .ftDesign a:link {
   color: white;
   text-decoration: none;
-  }
+}
 .ftDesign a:hover {
   color: red;
-  }
+}
 .flRight {
   float: right;
-  }
+}
 
-  /*Utility Classes*/
-  .center {
+/*Utility Classes*/
+.center {
+  text-align: center;
+}
+.warning {
+  color: red;
+}
+.mxWidth {
+  max-width: 100%;
+}
+.fa {
+  margin-left: 10px 2px;
+  padding: 10px;
+  width: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.fa:hover {
+  color: rgb(155, 0, 0);
+  text-decoration: none;
+}
+
+/*Media Screens*/
+@media only screen and (max-width: 400px) {
+  li {
+    border-style: none;
+    float: none;
     text-align: center;
-    }
-  .warning {
-    color: red;
   }
-  
-  /*Media Screens*/
-  @media only screen and (min-width: 900px) {
-    .container, .ftDesign {
-      width: 950px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .flRight {
+    display: none;
   }
+}
+@media only screen and (max-width: 600px) {
+  li {
+    border-style: none;
+  }
+  .flRight {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .container, .ftDesign {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
