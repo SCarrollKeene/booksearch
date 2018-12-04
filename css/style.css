@@ -99,7 +99,7 @@ img {
 }
 
 /*Media Screens*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 460px) {
   li {
     border-style: none;
     float: none;
