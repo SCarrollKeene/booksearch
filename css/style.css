@@ -80,6 +80,7 @@ img {
 }
 .warning {
   color: red;
+  font-size:70%;
 }
 .mxWidth {
   max-width: 100%;
