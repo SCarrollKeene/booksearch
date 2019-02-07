@@ -54,20 +54,19 @@ img {
   text-align: center;
   padding: 15px;
 }
-.push, .ftDesign {
+.push, .footer {
   height: 50px;
 }
-.ftDesign {
+.footer {
   background-color: rgb(255, 187, 0);
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 2.2rem;
 }
-.ftDesign a:link {
+.footer a:link {
   color: white;
   text-decoration: none;
 }
-.ftDesign a:hover {
+.footer a:hover {
   color: red;
 }
 .flRight {
@@ -119,7 +118,7 @@ img {
   }
 }
 @media only screen and (min-width: 900px) {
-  .container, .ftDesign {
+  .container, .footer {
     width: 950px;
     margin-left: auto;
     margin-right: auto;
