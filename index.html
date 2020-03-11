@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book Search</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- </head>   
-<body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="flRight"><a id="timeClock" href="#"></a></li>
-            </ul>            
-        </nav>
-        <header>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book Search</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>   
+    <body>
+        <div class="container">
+            <header class="header">
+                <nav>
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="fl-right"><a id="timeClock" href="#"></a></li>
+                    </ul>            
+                </nav> 
+                
+                <h1 class="title center">Book Search</h1>
             
-        </header>
-        <p class="center">
-            <label for="search">Book Search</label>
-            <input type="search" id="search" name="search" placeholder="Title or Author">
-            <input type="button" value="Search" onclick="bookSearch()">
-        </p>
-        
-        <div class="center" id="results"></div>
+                <form class="book-search center">
+                    <input type="search" id="search" class="book-search__input" name="search" placeholder="Title or Author">
+                    <input type="button" value="Search" class="book-search__button" onclick="bookSearch()">
+                </form>
+            </header>
+            
+            <main class="book-results center" id="results"></main>
 
-        <div class="push"></div>
-    </div>
-    <footer class="footer">
-            <h4>Email: <a href="mailto:siresquirebusiness@gmail.com">siresquirebusiness@gmail.com</a></h4>
-        </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+            <footer class="footer">
+                <h2><a href="mailto:siresquirebusiness@gmail.com" target="_blank" rel="noopener">Email: siresquirebusiness@gmail.com</a></h2>
+            </footer>
+        </div>
+            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
