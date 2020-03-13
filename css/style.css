@@ -37,7 +37,7 @@ body {
 .container {
   max-width: 120rem;
   margin: 8rem auto;
-  min-height: 80rem;
+  min-height: 100rem;
   background-color: var(--color-grey-light);
   box-shadow: 0 2rem 6rem rgba(0,0,0,.6);
 
@@ -160,6 +160,7 @@ body {
 }
 
 .footer a {
+  margin: 2rem;
   display: grid;
   justify-items: center;
 }
