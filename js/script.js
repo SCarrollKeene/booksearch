@@ -1,6 +1,6 @@
 // Display Current Date on Page
 let d = new Date().toLocaleDateString();
-document.getElementById("timeClock").innerHTML = d;
+document.getElementById("time-clock").innerHTML = d;
 
 
 function bookSearch() {
