@@ -27,7 +27,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;;
+  font-size: 1.4rem;;
   font-weight: 400;
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, var(--color-primary-medium), var(--color-primary-light) );
@@ -47,49 +47,39 @@ body {
   grid-template-rows: repeat(6, 1fr);
 }
 
-.header {
+.book-header {
   background-color: var(--color-primary-dark);
   grid-column: 1 / -1;
   border-bottom: 1px solid var(--color-grey-dark);
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  
-  }
+.book-heading-1 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 
-li:not(:last-child) {
-  float: left;
-  border-right:1px solid black;
-  }
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
 
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 1.4rem 1.6rem;
-  text-decoration: none;
-  }
+.book-time {
+  grid-column: 4 / -1;
+  grid-row: 2 / span 1;
+  font-family: inherit;
 
-li a:hover {
-  color: white;
-  background-color: var(color-highlight);
-  }
-
-.active {
-  color:  var(--color-primary-dark);
-  background-color: rgb(0, 0, 0);
-  }
-
-.title {
-  margin: .5rem 0;
+  display: grid;
+  justify-self: center;
+  align-self: center;
 }
 
 .book-search {
-  /* grid stuff goes here later for layout of nav/form*/
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
 }
 
 .book-search__input {
@@ -100,7 +90,7 @@ li a:hover {
   border: none;
   padding: .7rem 2rem;
   border-radius: 10rem;
-  width: 50%;
+  width: 65%;
   transition: all .2s;
 }
 
@@ -114,7 +104,7 @@ li a:hover {
 .book-search__input:focus {
   background-color: var(--color-grey-light-two);
   outline: none;
-  width: 55%;
+  width: 70%;
 }
 
 .book-search__button {
@@ -158,6 +148,11 @@ li a:hover {
   background-color: var(--color-primary-dark);
   padding: 1rem;
   grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 
 .footer a {
@@ -165,7 +160,8 @@ li a:hover {
   justify-items: center;
 }
 
-.footer a:link {
+.footer a:link,
+.footer a:active {
   color: #000;
   text-decoration: none;
 }
@@ -174,52 +170,32 @@ li a:hover {
   color: red;
 }
 
-.fl-right {
-  float: right;
-}
-
 /*Utility Classes*/
 .center {
   text-align: center;
 }
 
-/*
-.fa {
-  margin-left: 10px 2px;
-  padding: 10px;
-  width: 20px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.fa:hover {
-  color: rgb(155, 0, 0);
-  text-decoration: none;
-}
-*/
-
 /*Media Screens*/
-/* 460px */
-@media only screen and (max-width: 28.75em) {
-  .title {
-    display: none;
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .book-heading-1 {
+    grid-row: 1 / -1;
+    grid-column: 2 / span 2;
   }
 
-  li {
-    border-style: none;
-    float: none;
-    text-align: center;
+  .book-time {
+    visibility: hidden;
   }
 
-  .fl-right {
-    display: none;
+  .book-search {
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
   }
 
   .book-search__input {
     width: 75%;
     margin-bottom: 1rem;
+
   }
 
   .book-search__input:focus {
@@ -227,20 +203,10 @@ li a:hover {
   }
 }
 
-/* 600px */
-@media only screen and (max-width: 37.5em) {
-  li {
-    border-style: none;
-  }
-
-  .fl-right {
-    display: none;
-  }
-}
-
 /* 900 px */
 @media only screen and (max-width: 56.25em) {
   .container {
+    font-size: 1.1rem;
     margin-top: 0;
     margin-bottom: 0;
   }
