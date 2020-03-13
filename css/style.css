@@ -40,16 +40,17 @@ body {
   min-height: 80rem;
   background-color: var(--color-grey-light);
   box-shadow: 0 2rem 6rem rgba(0,0,0,.6);
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(max-content, 1fr);
 }
 
-.book-header {
+.header {
   background-color: var(--color-primary-dark);
-  grid-column: 1 / -1;
   border-bottom: 1px solid var(--color-grey-dark);
   align-items: center;
+  grid-column: 1 / -1;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -149,7 +150,7 @@ body {
   background-color: var(--color-primary-dark);
   padding: 1rem;
   grid-row: 6 / span 1;
-  grid-column: 1 / -1;
+  grid-column: 1 / span 1;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
