@@ -1,0 +1,44 @@
+.book-heading-1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row: 1 / -1;
+        grid-column: 2 / span 2;
+    }
+}
+  
+.book-time {
+    grid-column: 4 / -1;
+    grid-row: 2 / span 1;
+    font-family: inherit;
+  
+    display: grid;
+    justify-self: center;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        visibility: hidden;
+    }
+}
+
+.btn-book-read {
+    border: none;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: var(--color-highlight);
+    cursor: pointer;
+}
+  
+.btn-book-read:hover {
+    background-color: var(--color-primary-medium);
+}
+
+/* Helper Classes */
+.center {
+    text-align: center;
+}

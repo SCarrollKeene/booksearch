@@ -1,0 +1,54 @@
+.book-search {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-row: 3 / -1;
+        grid-column: 1 / -1;
+    }
+}
+
+.book-search__input {
+    background-color: var(--color-grey-light-two);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 10rem;
+    width: 75%;
+    transition: all .2s;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+        margin-bottom: 1rem;
+    }
+}
+  
+.book-search__input::-webkit-input-placeholder {
+    font-weight: 100;
+}
+
+.book-search__input::input-placeholder {
+    font-weight: 100;
+  }
+  
+.book-search__input:focus {
+    background-color: var(--color-grey-light-two);
+    outline: none;
+    width: 80%;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+    }
+}
+  
+.book-search__button {
+    background-color: var(--color-grey-light-two);
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    color: inherit;
+    padding: .7rem 2rem;
+    border-radius: 10rem;
+}

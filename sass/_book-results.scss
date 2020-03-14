@@ -1,0 +1,13 @@
+.book-results {
+    background-color: var(--color-grey-light);
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-grey-dark);
+    grid-column: 1 / -1;
+    grid-row: 2 / 6;
+  
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}

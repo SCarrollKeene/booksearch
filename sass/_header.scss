@@ -1,0 +1,10 @@
+.header {
+    background-color: var(--color-primary-dark);
+    border-bottom: 1px solid var(--color-grey-dark);
+    align-items: center;
+    grid-column: 1 / -1;
+  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
