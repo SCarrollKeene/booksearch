@@ -1,6 +1,6 @@
 # Book Search
 
-### A responsively designed web app with HTML and CSS that loads book json data with JavaScript using the Google Books API
+### A responsively designed web app with HTML and CSS (SASS/SCSS) that loads book json data with JavaScript using the Google Books API
 
 ### Scales down to tablet and mobile view without sacrificing overall design!
 
