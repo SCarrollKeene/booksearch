@@ -1,6 +1,6 @@
 // Display Current Date on Page
-let d = new Date().toLocaleDateString();
-document.getElementById("time-clock").innerHTML = d;
+const currentDate = new Date().toLocaleDateString();
+document.getElementById("time-clock").innerHTML = currentDate;
 
 
 function bookSearch() {
@@ -8,7 +8,7 @@ function bookSearch() {
     document.getElementById('results').innerHTML = "";
 
     if (search == '') {
-        alert("Please enter a Title or Author first");
+        //alert("Please enter a Title or Author first");
     } else {
         $.ajax({
             // Connect to google books api's and grab value of user input typed into search field
@@ -37,5 +37,12 @@ function bookSearch() {
     }  
 }
 
+// Global keypress event listener
+document.addEventListener('keypress', function(e) {
+    if (e.keyCode === 13 || e.which === 13) {
+        bookSearch();
+    }
+});
+
 // Click event listener to trigger bookSearch method upon button click
-document.getElementById('submit').addEventListener('keypress', bookSearch, false);
+document.getElementsByClassName('.book-search__button').addEventListener('click', bookSearch);
