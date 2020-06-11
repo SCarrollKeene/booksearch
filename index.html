@@ -15,12 +15,20 @@
                 <h2 class="book-time" id="time-clock"></h2>
             
                 <form class="book-search center">
-                    <input type="search" id="search" class="book-search__input" name="search" placeholder="Title or Author">
-                    <input type="button" value="Search" class="book-search__button" onclick="bookSearch()">
+                    <input type="text" class="book-search__input" placeholder="Search by title or author..." id="search" name="search" >
+                    <button value="Search" class="book-search__button" onclick="searchController()">Search</button>
                 </form>
             </header>
             
-            <main class="book-results center" id="results"></main>
+            <main class="book-results center" id="results">
+                <ul class="book-results__list">
+                    <!-- -->
+                </ul>
+
+                <div class="book-results__gallery">
+                    <!-- -->
+                </div>
+            </main>
 
             <footer class="footer">
                 <h3><a href="mailto:siresquirebusiness@gmail.com" target="_blank" rel="noopener">Email: siresquirebusiness@gmail.com</a></h3>
