@@ -19,10 +19,10 @@ class Search {
         .then(data => {
             let books = data.items;
             const markup = books.map(book => {
-                // Render Results back to user
+                // Render results back to user
                 return `
                 <div class="book-gallery">
-                    <img src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="book">
+                    <img src="${book.volumeInfo.imageLinks.smallThumbnail}" alt="${book.volumeInfo.title}">
                     <h1>Title: ${book.volumeInfo.title}</h1>
                     <h2>Author(s): ${book.volumeInfo.authors}</h2>
                     <h3>Published: ${book.volumeInfo.publishedDate}</h3>
